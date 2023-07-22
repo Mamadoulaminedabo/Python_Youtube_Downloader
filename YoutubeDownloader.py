@@ -19,7 +19,7 @@ def download_video():
         stream_360p = yt.streams.filter(res="360p", progressive=True).first()
 
         # Set the YouTube cookie to handle age-restricted videos
-        # yt.streams.cookie_manager.set_cookie("CONSENT=YES+cb.20210328-17-p0.en+FX+207")
+        yt.streams.cookie_manager.set_cookie("CONSENT=YES+cb.20210328-17-p0.en+FX+207")
 
         if stream_720p:
             download_path = os.path.join(os.path.expanduser("~"), "Movies", f"{title}720p.mp4")
